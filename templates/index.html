@@ -5,38 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tetuan City Power</title>
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
 </head>
 <body>
-<div class="bg">
+<div class="main">
 <div class="form">
-    <form>
+    <form action="/result" method="POST" id="form">
 
         <h2>Tetuan City - Zone power Consumption Prediction</h2>
         <label for="temp">Temperature</label>
-        <input type="number" name='temp' id="temp" required>
+        <input type="number" name='temp' id="temp" step=0.001 required>
             <br><br>
 
         <label for="humidity">Humidity</label>
-        <input type="number" name="humidity" id="humidity" required>
+        <input type="number" name="humidity" id="humidity" step=0.001 required>
         <br><br>
 
         <label for="wind">Wind Speed</label>
-        <input type="number" name="wind" id="wind" required>
+        <input type="number" name="wind" id="wind" step=0.001 required>
         <br><br>
 
         <label for="general_diff">General Diffuse Flows</label>
-        <input type="number" name="general_diff" id="general_diff" required>
+        <input type="number" name="general_diff" id="general_diff" step=0.001 required>
         <br><br>
 
         <label for="diff">Diffuse Flows</label>
-        <input type="number" name="diff" id="diff" required>
+        <input type="number" name="diff" id="diff" step=0.001 required>
         <br><br>
 
-        <input type="submit" value="Predict Consumption">
+        <input type="submit" value="Predict Consumption" >
     </form>
 </div>
 
+
+<div class="image">
+    <a href="https://github.com/tenoob/tetuan_city_power">
+        <img  src="../static/assets/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b4ec817.2080142615351082033227.png" alt="github image" >
+    </a>
 </div>
+
+</div>
+
 </body>
 </html>
