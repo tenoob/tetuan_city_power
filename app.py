@@ -1,4 +1,3 @@
-from ctypes import windll
 import math
 from tempfile import tempdir
 from flask import Flask, redirect , render_template ,request
