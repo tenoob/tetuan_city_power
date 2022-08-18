@@ -1,10 +1,11 @@
 This project is MultiOutput Regression problem on Tetouan city power consumption
 
 ```
-##  [Dataset](https://archive.ics.uci.edu/ml/datasets/Power+consumption+of+Tetouan+city)
+Dataset :https://archive.ics.uci.edu/ml/datasets/Power+consumption+of+Tetouan+city
+Try out the app at : https://tetuan-city-power.herokuapp.com/
 
 ```
 
-This version uses a KNN ML model to predict the power consumption range in each Zone of the City. There are 3 Zones in the City
+This version uses a XGboost Regressor with a MultiOutputRegressor wrapper on top of it
 
-Try out the app at : https://tetuan-city-power.herokuapp.com/
+if you have suggestions on web design or any other thing which can improve the project and want to share the idea with me please message me on [linkedin](https://www.linkedin.com/in/anand-mohan-kumar/)

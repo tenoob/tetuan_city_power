@@ -4,7 +4,7 @@ from flask import Flask, redirect , render_template ,request
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('knn_model.pkl','rb'))
+model = pickle.load(open('xgboost_model_v3.pkl','rb'))
 scaler = pickle.load(open('scaler.pkl','rb'))
 
 
@@ -26,8 +26,9 @@ def predict():
         general_diff = float(request.form['general_diff'])
         diff = float(request.form['diff'])
 
+
         var = [[temp,humidity,wind,general_diff,diff]]
-        var = scaler.transform(var)
+        #var = scaler.transform(var)
         result = model.predict(var)
         r0= ("%s - %s" % ((round_up(result[0][0],-3)-500),(round_up(result[0][0],-3)+500)))
         r1=("%s - %s" % ((round_up(result[0][1],-3)-500),(round_up(result[0][1],-3)+500)))
